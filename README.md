@@ -56,7 +56,7 @@ Genome_size = T/N
 You can use k-mer sizes of 31, count kmers with jellyfish count and make a histogram file with jellyfish histo.
 https://koke.asrc.kanazawa-u.ac.jp/HOWTO/kmer-genomesize.html
 
- jellyfish count -t 2 -C -m 31 -s 10M -o ./output/SRR292678_31mer ./raw/SRR292678sub_S1_L001_R1_001.fastq  ./raw/SRR292678sub_S1_L001_R1_001.fastq 
+ jellyfish count -t 2 -C -m 31 -s 10M -o ./output/SRR292678_31mer ./raw/SRR292678sub_S1_L001_R1_001.fastq  ./raw/SRR292678sub_S1_L001_R2_001.fastq 
  
 -t 2
 specifies the number of threads to be used. 
