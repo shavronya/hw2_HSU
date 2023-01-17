@@ -69,5 +69,7 @@ is some kind of magical number specification of hash size. This should be as hig
 
 jellyfish histo -o ./output/SRR292678_31mer.histo ./output/SRR292678_31mer 
 
+tar -xzf SPAdes-3.15.4-Linux.tar.gz 
+
 
 
