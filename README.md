@@ -40,4 +40,7 @@ specified that now you are counting for 31 mer (i.e., k=31)
 -s 10M
 is some kind of magical number specification of hash size. This should be as high as the physical memory allows. The higher the faster, but exceeding the available memory leads to failure or extremely slow counting.
 
+jellyfish histo -o ./output/SRR292678_31mer.histo ./output/SRR292678_31mer 
+
+
 
