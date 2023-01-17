@@ -25,3 +25,7 @@ gunzip SRR292770_S1_L001_R2_001.fastq
 cd ../
 fastqc ./raw/SRR292770_S1_L001_R1_001.fastq ./raw/SRR292770_S1_L001_R2_001.fastq  -o ./output
 conda install -c conda-forge jellyfish
+N = (M*L)/(L-K+1)
+Genome_size = T/N
+(N: Depth of coverage, M: Kmer peak, K: Kmer-size, L: avg read length T: Total bases)
+You can use k-mer sizes of 31, count kmers with jellyfish count and make a histogram file with jellyfish histo.
