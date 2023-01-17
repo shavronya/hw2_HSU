@@ -24,7 +24,7 @@ gunzip SRR292770_S1_L001_R1_001.fastq
 gunzip SRR292770_S1_L001_R2_001.fastq
 cd ../
 fastqc ./raw/SRR292770_S1_L001_R1_001.fastq ./raw/SRR292770_S1_L001_R2_001.fastq  -o ./output
-conda install -c conda-forge jellyfish
+conda install -c bioconda kmer-jellyfish
 N = (M*L)/(L-K+1)
 Genome_size = T/N
 (N: Depth of coverage, M: Kmer peak, K: Kmer-size, L: avg read length T: Total bases)
