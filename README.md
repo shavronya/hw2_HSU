@@ -53,6 +53,7 @@ conda install -c bioconda kmer-jellyfish
 N = (M*L)/(L-K+1)
 Genome_size = T/N
 (N: Depth of coverage, M: Kmer peak, K: Kmer-size, L: avg read length T: Total bases)
+N = 125 * 
 You can use k-mer sizes of 31, count kmers with jellyfish count and make a histogram file with jellyfish histo.
 https://koke.asrc.kanazawa-u.ac.jp/HOWTO/kmer-genomesize.html
 
@@ -80,6 +81,6 @@ sum(as.numeric(spec_31[,1]*spec_31[,2]))/125
 #5279372
 
 tar -xzf SPAdes-3.15.4-Linux.tar.gz 
-
+./SPAdes-3.15.4-Linux/bin/spades.py --test 
 
 
