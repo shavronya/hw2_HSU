@@ -83,4 +83,6 @@ sum(as.numeric(spec_31[,1]*spec_31[,2]))/125
 tar -xzf SPAdes-3.15.4-Linux.tar.gz 
 ./SPAdes-3.15.4-Linux/bin/spades.py --test 
 
+conda install -c bioconda quast
+
 
