@@ -111,3 +111,5 @@ conda install -c "bioconda/label/cf201901" prokka
  prokka --outdir prokka --prefix E.coli_X ./output/spades2/scaffolds.fasta  --centre X --compliant 
 
 conda install -c "bioconda/label/cf201901" barrnap
+
+barrnap rrna.fa < ./output/spades2/scaffolds.fasta > rrna.gff 
