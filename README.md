@@ -147,3 +147,7 @@ https://cge.food.dtu.dk/services/ResFinder/
 https://cge.food.dtu.dk//cgi-bin/webface.fcgi?jobid=63C8471E00005413E38574C2
 
 bla
+
+jellyfish count -t 2 -C -m 31 -s 10M -o ./output/31mer ./output/spades2/scaffolds.fasta 
+
+jellyfish histo -o ./output/31mer.histo ./output/31mer
