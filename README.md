@@ -100,5 +100,5 @@ tar -xzf SPAdes-3.15.4-Linux.tar.gz
  
  cd quast-5.2.0
 
-./quast-5.2.0/quast.py ./output/spades/scaffolds.fasta
+./quast-5.2.0/quast.py ./output/spades/contigs.fasta ./output/spades/scaffolds.fasta
 
