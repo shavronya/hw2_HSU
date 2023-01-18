@@ -117,3 +117,5 @@ barrnap rrna.fa < ./output/spades2/scaffolds.fasta > rrna.gff
 https://www.java.com/en/download/manual.jsp
 
 https://darlinglab.org/mauve/download.html
+
+barrnap ./output/spades/scaffolds.fasta --incseq > rrna.fa
