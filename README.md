@@ -104,5 +104,7 @@ tar -xzf SPAdes-3.15.4-Linux.tar.gz
 
 ./SPAdes-3.15.4-Linux/bin/spades.py --pe1-1 ./raw/SRR292678sub_S1_L001_R1_001.fastq --pe1-2 ./raw/SRR292678sub_S1_L001_R2_001.fastq --mp1-1 ./raw/SRR292770_S1_L001_R1_001.fastq --mp1-2 ./raw/SRR292770_S1_L001_R2_001.fastq --mp2-1 ./raw/SRR292862_S2_L001_R1_001.fastq --mp2-2 ./raw/SRR292862_S2_L001_R2_001.fastq -o ./output/spades2 
 
-./quast-5.2.0/quast.py ./output/spades/contigs.fasta ./output/spades/scaffolds.fasta ./output/spades2/contigs.fasta ./output/spades2/scaffolds.fast
+./quast-5.2.0/quast.py ./output/spades/contigs.fasta ./output/spades/scaffolds.fasta ./output/spades2/contigs.fasta ./output/spades2/scaffolds.fasta
+
+conda install -c "bioconda/label/cf201901" prokka
 
