@@ -119,3 +119,14 @@ https://www.java.com/en/download/manual.jsp
 https://darlinglab.org/mauve/download.html
 
 barrnap ./output/spades/scaffolds.fasta --incseq > rrna.fa
+
+https://blast.ncbi.nlm.nih.gov/Blast.cgi
+
+Filed database Ref Seq Genome Database (refseq_genomes)
+
+Organism filed E. coli (taxid:562)
+
+Enterz Query field 1900/01/01:2011/01/01[PDAT]
+
+
+https://blast.ncbi.nlm.nih.gov/Blast.cgi#alnHdr_218693476
