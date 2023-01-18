@@ -92,6 +92,13 @@ tar -xzf SPAdes-3.15.4-Linux.tar.gz
 
 ./SPAdes-3.15.4-Linux/bin/spades.py --test 
 
-conda install -c bioconda quast
+./SPAdes-3.15.4-Linux/bin/spades.py -1 ./raw/SRR292678sub_S1_L001_R1_001.fastq -2 ./raw/SRR292678sub_S1_L001_R2_001.fastq -o ./output/spades
 
+ wget https://github.com/ablab/quast/releases/download/quast_5.2.0/quast-5.2.0.tar.gz
+ 
+ tar -xzf quast-5.2.0.tar.gz
+ 
+ cd quast-5.2.0
+
+./quast-5.2.0/quast.py ./output/spades/scaffolds.fasta
 
