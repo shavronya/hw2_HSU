@@ -132,5 +132,10 @@ https://blast.ncbi.nlm.nih.gov/Blast.cgi#alnHdr_218693476
 
 Escherichia coli 55989
 
+Java installation https://www.java.com/en/download/manual.jsp
 
-
+To compare the E. coli X with the reference genome, first install Mauve
+(http://darlinglab.org/mauve/download.html) on your computer. Open “Mauve” and
+select “File” → “Align with progressiveMauve...”. Press “Add sequences” and select the
+reference genome, then the annotated E. coli X genome (“scaffolds.gbk”), and start the
+alignment.
