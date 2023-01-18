@@ -128,7 +128,7 @@ Organism filed E. coli (taxid:562)
 
 Enterz Query field 1900/01/01:2011/01/01[PDAT]
 
-https://blast.ncbi.nlm.nih.gov/Blast.cgi#alnHdr_218693476
+https://www.ncbi.nlm.nih.gov/nuccore/NC_011748.1?report=genbank
 
 Escherichia coli 55989
 
