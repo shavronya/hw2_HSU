@@ -188,15 +188,17 @@ run Barrnap
 
 <code>barrnap ./output/spades3/scaffolds.fasta --incseq > rrna.fa </code>
 
-go to <code>https://blast.ncbi.nlm.nih.gov/Blast.cgi -> nucleotide BLAST</code>
+go to 
+ 
+ <code>https://blast.ncbi.nlm.nih.gov/Blast.cgi -> nucleotide BLAST</code>
 
-choose 
+choose:
 
-RefSeq Genome Database (refseq_genomes)
+* RefSeq Genome Database (refseq_genomes)
 
-Organism fE. coli (taxid:562)
+* Organism fE. coli (taxid:562)
 
-Enterz Query 1900/01/01:2011/01/01[PDAT]
+* Enterz Query 1900/01/01:2011/01/01[PDAT]
 
 The closest one is seq NC_011748.1	Escherichia coli 55989
 
