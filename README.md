@@ -4,7 +4,8 @@ SCAMT Bioinformatics course
 
 ## Preparation
 
-### create a directory and folders<p>
+create a directory and folders<p>
+
 <code>mkdir ./HW2_HUS</code>
  
 <code>cd ./HW2_HUS</code>
@@ -16,7 +17,7 @@ SCAMT Bioinformatics course
 <code>cd ./raw</code>
  
 
-### upload and upzip data
+upload and upzip data
 
 <code>wget https://d28rh4a8wq0iu5.cloudfront.net/bioinfo/SRR292678sub_S1_L001_R1_001.fastq.gz</code>
  
@@ -61,15 +62,57 @@ According to the FastQC reports per base sequence quality is excellent. No trimm
 
 ## K-mer profile and genome size estimation
 
+install jellyfish
+
+<code>conda install -c bioconda kmer-jellyfish</code>
+
+check CPU
+ 
+<lscpu>
+ 
+run jellyfish
+
+<code>jellyfish count -t 2 -C -m 31 -s 10M -o ./output/SRR292678_31mer ./raw/SRR292678sub_S1_L001_R1_001.fastq  ./raw/SRR292678sub_S1_L001_R2_001.fastq </code>
+
+<code>-t 2</code> specifies the number of threads to be used <p>
+<code>-C</code> specifies the both strands are considered <p>
+<code>-m 31</code> specifies that now you are counting for 31 mer (i.e., k=31)<p>
+<code>-s 128M</code> is some kind of magical number specification of hash size. This should be as high as the physical memory allows<p>
+<code>-o </code>specifies the prefix of output file names<p>
+
+create histogram 
+ 
+<code>jellyfish histo -o ./output/SRR292678_31mer.histo ./output/SRR292678_31mer</code>
+
+visualize histogram in R and define a peak
+
+<code>spec_31 <- read.table("SRR292678_31mer.histo")</code><p>
+<code>plot(spec_31[5:200,],type="l")</code><p>
+<code>points(spec_31[16:200,])</code><p>
+<code>sum(as.numeric(spec_31[,1]*spec_31[,2]))</code><p>
+the total number of k-mer in the distribution is 659921520<p>
+<code>spec_31</code><p>
+peak is 125 <p>
+<code>sum(as.numeric(spec_31[,1]*spec_31[,2]))/125</code><p>
+the genome size is 5279372
+
 
 
 <code></code>
 <code></code>
 <code></code>
+ <code></code>
+<code></code>
+<code></code>
+ <code></code>
+<code></code>
+<code></code>
+ <code></code>
+<code></code>
 <code></code>
 
 
-conda install -c bioconda kmer-jellyfish
+
 
 N = (M*L)/(L-K+1)
 Genome_size = T/N
@@ -78,36 +121,10 @@ N = 125 *
 You can use k-mer sizes of 31, count kmers with jellyfish count and make a histogram file with jellyfish histo.
 https://koke.asrc.kanazawa-u.ac.jp/HOWTO/kmer-genomesize.html
 
- jellyfish count -t 2 -C -m 31 -s 10M -o ./output/SRR292678_31mer ./raw/SRR292678sub_S1_L001_R1_001.fastq  ./raw/SRR292678sub_S1_L001_R2_001.fastq 
- 
--t 2
-specifies the number of threads to be used. 
--C
-specifies the both strands are considered. 
--m 31
-specified that now you are counting for 31 mer (i.e., k=31)
--s 10M
-is some kind of magical number specification of hash size. This should be as high as the physical memory allows. The higher the faster, but exceeding the available memory leads to failure or extremely slow counting.
 
-jellyfish histo -o ./output/SRR292678_31mer.histo ./output/SRR292678_31mer 
 
-spec_31 <- read.table("SRR292678_31mer.histo")
 
-plot(spec_31[5:200,],type="l")
 
-points(spec_31[16:200,])
-
-sum(as.numeric(spec_31[,1]*spec_31[,2]))
-
-#659921520
-
-spec_31
-
-#125 peak
-
-sum(as.numeric(spec_31[,1]*spec_31[,2]))/125
-
-#5279372
 
 tar -xzf SPAdes-3.15.4-Linux.tar.gz 
 
