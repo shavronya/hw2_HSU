@@ -108,85 +108,144 @@ Genome_size = T/N <p>
 N = 125 * 90 / (90 - 31 + 1) = 187.5
 Genome_size = 5499346 * 2 * 90 / 187.5 = 5279372
 
-Graph 
-https://koke.asrc.kanazawa-u.ac.jp/HOWTO/kmer-genomesize.html
-
-<code></code>
-<code></code>
-<code></code>
- <code></code>
-<code></code>
-<code></code>
- <code></code>
-<code></code>
-<code></code>
- <code></code>
-<code></code>
-<code></code>
+Use <code>http://qb.cshl.edu/genomescope/</code> to build the graph
+![image](https://user-images.githubusercontent.com/114799897/213418960-3d59d76a-9046-4499-b167-e47af4669c2b.png)
 
 
+## Assembling E. coli X genome from paired reads
+
+download SPAdes (read correction and assembly)
+
+<code>https://cab.spbu.ru/software/spades/ </code>
+
+upzip SPAdes
+
+<code>tar -xzf SPAdes-3.15.4-Linux.tar.gz</code>
+
+test SPAdes
+
+<code>./SPAdes-3.15.4-Linux/bin/spades.py --test</code>
+
+run SPAdes for SRR292678
+
+<code>./SPAdes-3.15.4-Linux/bin/spades.py -1 ./raw/SRR292678sub_S1_L001_R1_001.fastq -2 ./raw/SRR292678sub_S1_L001_R2_001.fastq -o ./output/spades</code>
+
+get QUAST (evaluates genome assemblies by computing various metrics)
+
+<code>wget https://github.com/ablab/quast/releases/download/quast_5.2.0/quast-5.2.0.tar.gz</code>
+
+unzip QUAST
+
+<code> tar -xzf quast-5.2.0.tar.gz</code>
+
+run QUAST
+
+<code>./quast-5.2.0/quast.py ./output/spades/contigs.fasta ./output/spades/scaffolds.fasta</code>
+
+## Effect of read correction
 
 
-tar -xzf SPAdes-3.15.4-Linux.tar.gz 
+<code>jellyfish count -t 2 -C -m 31 -s 128M -o ./output/scaffolds_31mer ./output/spades/scaffolds.fasta </code>
 
-./SPAdes-3.15.4-Linux/bin/spades.py --test 
+<code> jellyfish histo -o ./output/scaffolds_31mer.histo ./output/scaffolds_31mer </code>
 
-./SPAdes-3.15.4-Linux/bin/spades.py -1 ./raw/SRR292678sub_S1_L001_R1_001.fastq -2 ./raw/SRR292678sub_S1_L001_R2_001.fastq -o ./output/spades
+Use <code>http://qb.cshl.edu/genomescope/</code> to build the graph
 
- wget https://github.com/ablab/quast/releases/download/quast_5.2.0/quast-5.2.0.tar.gz
- 
- tar -xzf quast-5.2.0.tar.gz
- 
- cd quast-5.2.0
+## Impact of reads with large insert size
 
-./quast-5.2.0/quast.py ./output/spades/contigs.fasta ./output/spades/scaffolds.fasta
+run SPAdes for SRR292678 as a paired ends, SRR292862 and SRR292770 as a mate pairs
 
-./SPAdes-3.15.4-Linux/bin/spades.py --pe1-1 ./raw/SRR292678sub_S1_L001_R1_001.fastq --pe1-2 ./raw/SRR292678sub_S1_L001_R2_001.fastq --mp1-1 ./raw/SRR292770_S1_L001_R1_001.fastq --mp1-2 ./raw/SRR292770_S1_L001_R2_001.fastq --mp2-1 ./raw/SRR292862_S2_L001_R1_001.fastq --mp2-2 ./raw/SRR292862_S2_L001_R2_001.fastq -o ./output/spades2 
+<code>./SPAdes-3.15.4-Linux/bin/spades.py --pe1-1 ./raw/SRR292678sub_S1_L001_R1_001.fastq --pe1-2 ./raw/SRR292678sub_S1_L001_R2_001.fastq --mp1-1 ./raw/SRR292770_S1_L001_R1_001.fastq --mp1-2 ./raw/SRR292770_S1_L001_R2_001.fastq --mp2-1 ./raw/SRR292862_S2_L001_R1_001.fastq --mp2-2 ./raw/SRR292862_S2_L001_R2_001.fastq -o ./output/spades3</code>
 
-./quast-5.2.0/quast.py ./output/spades/contigs.fasta ./output/spades/scaffolds.fasta ./output/spades2/contigs.fasta ./output/spades2/scaffolds.fasta
+run QUAST
 
-conda install -c "bioconda/label/cf201901" prokka
+<code>./quast-5.2.0/quast.py ./output/spades/contigs.fasta ./output/spades/scaffolds.fasta ./output/spades3/contigs.fasta ./output/spades3/scaffolds.fasta</code>
 
- prokka --outdir prokka --prefix E.coli_X ./output/spades2/scaffolds.fasta  --centre X --compliant 
+Save the QUAST report data in your lab journal. In your week report you should provide the
+main metrics (N50 and number of contigs) for single-library and three-library assemblies.
+Also answer, how did the quality of the assembly improve compared to the previous run of
+SPAdes, and why.
 
-conda install -c "bioconda/label/cf201901" barrnap
+## Genome Annotation
 
-barrnap rrna.fa < ./output/spades2/scaffolds.fasta > rrna.gff 
+get Prokka
 
-https://www.java.com/en/download/manual.jsp
+<code>conda install -c "bioconda/label/cf201901" prokka</code>
 
-https://darlinglab.org/mauve/download.html
+run Prokka
+<code> prokka --outdir prokka --prefix E.coli_X ./output/spades3/scaffolds.fasta</code>
 
-barrnap ./output/spades/scaffolds.fasta --incseq > rrna.fa
+## Finding the closest relative of E. coli X
 
-https://blast.ncbi.nlm.nih.gov/Blast.cgi
+install Barrnap (rRNA genes prediction tool)
 
-Filed database Ref Seq Genome Database (refseq_genomes)
+<code>conda install -c "bioconda/label/cf201901" barrnap</code>
 
-Organism filed E. coli (taxid:562)
+run Barrnap 
 
-Enterz Query field 1900/01/01:2011/01/01[PDAT]
+<code>barrnap ./output/spades3/scaffolds.fasta --incseq > rrna.fa </code>
 
-https://www.ncbi.nlm.nih.gov/nuccore/NC_011748.1?report=genbank
+go to <code>https://blast.ncbi.nlm.nih.gov/Blast.cgi -> nucleotide BLAST</code>
 
-Escherichia coli 55989
+choose 
 
-Java installation https://www.java.com/en/download/manual.jsp
+RefSeq Genome Database (refseq_genomes)
 
-To compare the E. coli X with the reference genome, first install Mauve
-(http://darlinglab.org/mauve/download.html) on your computer. Open “Mauve” and
-select “File” → “Align with progressiveMauve...”. Press “Add sequences” and select the
-reference genome, then the annotated E. coli X genome (“scaffolds.gbk”), and start the
-alignment.
+Organism fE. coli (taxid:562)
 
-stxB stxA
+Enterz Query 1900/01/01:2011/01/01[PDAT]
 
-https://cge.food.dtu.dk/services/ResFinder/
+The closest one is seq NC_011748.1	Escherichia coli 55989
 
-https://cge.food.dtu.dk//cgi-bin/webface.fcgi?jobid=63C8471E00005413E38574C2
+Escherichia coli 55989, complete sequence
 
-bla
+<code>https://www.ncbi.nlm.nih.gov/nuccore/NC_011748.1?report=genbank</code>
 
-jellyfish count -t 2 -C -m 31 -s 10M -o ./output/31mer ./output/spades2/scaffolds.fasta 
+Donwload FASTA and save it as “55989.fasta”
 
-jellyfish histo -o ./output/31mer.histo ./output/31mer
+## What is the genetic cause of HUS?
+
+Install Java
+
+<code>https://www.java.com/en/download/manual.jsp</code>
+
+Install Mauve
+
+<code>https://darlinglab.org/mauve/download.html</code>
+
+Open “Mauve” and select “File” → “Align with progressiveMauve...”. Press “Add sequences” and select the reference genome, then the annotated E. coli X genome (“scaffolds.gbk”), and start the alignment.
+
+Shiga toxin-related genes
+stxB (3483605 - 3483874, 270)
+stxA (3483886 - 3484845, 960)
+
+![image](https://user-images.githubusercontent.com/114799897/213416924-79c9560b-412c-4f50-8779-e13e0d644096.png)
+
+## Tracing the source of toxin genes in E. coli X
+
+download annotation
+
+<code> https://disk.yandex.ru/d/aWhOBLVIXR7Oaw </code>
+
+Based on this annotation, what is the origin of these toxin genes in E.coli X?
+
+## Antibiotic resistance detection
+
+go to ResFinder
+<code>https://cge.food.dtu.dk/services/ResFinder/</code>
+
+upload the “scaffolds.fasta” file from the SPAdes output (select “Acquired antimicrobial resistance genes”, select “E. coli”)
+
+results for E. coli 55989
+<code>https://cge.food.dtu.dk//cgi-bin/webface.fcgi?jobid=63C9164B00001F6BCB7B53E9</code>
+
+results for E. coli X
+<code>https://cge.food.dtu.dk//cgi-bin/webface.fcgi?jobid=63C9159D00001D302B006644</code>
+
+## Antibiotic resistance mechanism
+
+Search for these enzymes in the same way that we looked for the toxin genes: by using the Sequence Navigator in Mauve. Determine by looking at neighboring genes how E. coli X obtained these genes.
+
+beta-lactamase
+
+bla (4758802-4759935, 1134)
