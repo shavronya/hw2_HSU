@@ -283,10 +283,12 @@ resistant to:
 
 ## Antibiotic resistance mechanism
 
-Search for these enzymes in the same way that we looked for the toxin genes: by using the Sequence Navigator in Mauve. Determine by looking at neighboring genes how E. coli X obtained these genes.
+Search for these enzymes in the same way that we looked for the toxin genes: by using the Sequence Navigator in Mauve. 
 
 beta-lactamase
 
 bla (4758802-4759935, 1134)
 ![image](https://user-images.githubusercontent.com/114799897/213423286-2384dec8-3937-4709-a1e6-f915532b9266.png)
+
+bla gene could have appeared through horizontal transfer between bacteria
 
