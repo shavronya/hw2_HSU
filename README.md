@@ -179,9 +179,7 @@ report for single-library and three-library assembly
  
 ![image](https://user-images.githubusercontent.com/114799897/213426718-70e0b3fc-02c6-4b87-8de9-830bb7529e4d.png)
  
-according to the heatmap, the quality of the assembly improve compared to the previous run of SPAdes.
-
-WHYYYY
+according to the heatmap, the quality of the assembly improved because of addition of mate-pair libraries
 
 
 ## Genome Annotation
