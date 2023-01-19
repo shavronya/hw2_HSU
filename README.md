@@ -160,6 +160,9 @@ run QUAST
 
 Use <code>http://qb.cshl.edu/genomescope/</code> to build the graph
 
+Add both plots in your report and explain the difference.
+
+
 ## Impact of reads with large insert size
 
 run SPAdes for SRR292678 as a paired ends, SRR292862 and SRR292770 as a mate pairs
