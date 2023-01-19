@@ -106,9 +106,11 @@ Genome_size = T/N <p>
 <code>T</code> Total bases <p>
 
 N = 125 * 90 / (90 - 31 + 1) = 187.5
+ 
 Genome_size = 5499346 * 2 * 90 / 187.5 = 5279372
 
 Use <code>http://qb.cshl.edu/genomescope/</code> to build the graph
+ 
 ![image](https://user-images.githubusercontent.com/114799897/213418960-3d59d76a-9046-4499-b167-e47af4669c2b.png)
 
 
