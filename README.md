@@ -68,7 +68,7 @@ install jellyfish
 
 check CPU
  
-<lscpu>
+<coce>lscpu</code>
  
 run jellyfish
 
@@ -219,7 +219,8 @@ Shiga toxin-related genes
 stxB (3483605 - 3483874, 270)
 stxA (3483886 - 3484845, 960)
 
-![image](https://user-images.githubusercontent.com/114799897/213416924-79c9560b-412c-4f50-8779-e13e0d644096.png)
+![image](https://user-images.githubusercontent.com/114799897/213423412-7962b59e-cea8-4e31-bd57-0cde5cfd5697.png)
+
 
 ## Tracing the source of toxin genes in E. coli X
 
@@ -249,3 +250,5 @@ Search for these enzymes in the same way that we looked for the toxin genes: by 
 beta-lactamase
 
 bla (4758802-4759935, 1134)
+![image](https://user-images.githubusercontent.com/114799897/213423286-2384dec8-3937-4709-a1e6-f915532b9266.png)
+
