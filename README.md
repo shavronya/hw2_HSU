@@ -163,10 +163,16 @@ run QUAST
 
 <code>./quast-5.2.0/quast.py ./output/spades/contigs.fasta ./output/spades/scaffolds.fasta ./output/spades3/contigs.fasta ./output/spades3/scaffolds.fasta</code>
 
-Save the QUAST report data in your lab journal. In your week report you should provide the
-main metrics (N50 and number of contigs) for single-library and three-library assemblies.
-Also answer, how did the quality of the assembly improve compared to the previous run of
-SPAdes, and why.
+report for single-library and three-library assembly
+ 
+![image](https://user-images.githubusercontent.com/114799897/213426636-4de146bf-2bbc-404b-b32b-18d6d4d5bd99.png)
+ 
+![image](https://user-images.githubusercontent.com/114799897/213426718-70e0b3fc-02c6-4b87-8de9-830bb7529e4d.png)
+ 
+according to the heatmap, the quality of the assembly improve compared to the previous run of SPAdes.
+
+WHYYYY
+
 
 ## Genome Annotation
 
