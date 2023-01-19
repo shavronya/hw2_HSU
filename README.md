@@ -2,9 +2,9 @@ HW2
 2011 Germany E. coli O104:H4 outbreak
 SCAMT Bioinformatics course 
 
-##Preparation
+## Preparation
 
-###create a directory and folders<p>
+### create a directory and folders<p>
 <code>mkdir ./HW2_HUS</code>
  
 <code>cd ./HW2_HUS</code>
@@ -16,7 +16,7 @@ SCAMT Bioinformatics course
 <code>cd ./raw</code>
  
 
-###upload and upzip data
+### upload and upzip data
 
 <code>wget https://d28rh4a8wq0iu5.cloudfront.net/bioinfo/SRR292678sub_S1_L001_R1_001.fastq.gz</code>
  
@@ -43,7 +43,7 @@ SCAMT Bioinformatics course
 <code>gunzip SRR292770_S1_L001_R2_001.fastq</code>
  
  
-##Exploring the dataset
+## Exploring the dataset
  
 SRR292678 - paired end, insert size 470 bp (forward reads, reverse reads, 400 Mb each)<p>
 SRR292862 – mate pair, insert size 2 kb (forward reads, reverse reads, 200 Mb each)<p>
@@ -59,7 +59,7 @@ SRR292770 – mate pair, insert size 6 kb (forward reads, reverse reads, 200 Mb 
  
 According to the FastQC reports per base sequence quality is excellent. No trimming is needed
 
-##K-mer profile and genome size estimation
+## K-mer profile and genome size estimation
 
 
 
