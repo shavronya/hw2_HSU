@@ -229,7 +229,9 @@ Install Mauve
 Open “Mauve” and select “File” → “Align with progressiveMauve...”. Press “Add sequences” and select the reference genome, then the annotated E. coli X genome (“scaffolds.gbk”), and start the alignment.
 
 Shiga toxin-related genes
+ 
 stxB (3483605 - 3483874, 270)
+ 
 stxA (3483886 - 3484845, 960)
 
 ![image](https://user-images.githubusercontent.com/114799897/213423412-7962b59e-cea8-4e31-bd57-0cde5cfd5697.png)
