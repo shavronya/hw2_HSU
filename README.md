@@ -58,7 +58,9 @@ SRR292770 – mate pair, insert size 6 kb (forward reads, reverse reads, 200 Mb 
  
 <code>fastqc ./raw/SRR292770_S1_L001_R1_001.fastq ./raw/SRR292770_S1_L001_R2_001.fastq  -o ./output</code>
  
-According to the FastQC reports per base sequence quality is excellent. No trimming is needed
+according to the FastQC reports per base sequence quality is excellent
+
+no trimming is needed
 
 ## K-mer profile and genome size estimation
 
