@@ -263,9 +263,21 @@ results for E. coli 55989
  
 <code>https://cge.food.dtu.dk//cgi-bin/webface.fcgi?jobid=63C9164B00001F6BCB7B53E9</code>
 
+resistant to:
+
+* tetracycline
+
 results for E. coli X
  
 <code>https://cge.food.dtu.dk//cgi-bin/webface.fcgi?jobid=63C9159D00001D302B006644</code>
+
+* beta-lactam
+* folate pathway antagonist
+* tetracycline
+* quaternary ammonium compound
+* aminoglycoside
+
+
 
 ## Antibiotic resistance mechanism
 
