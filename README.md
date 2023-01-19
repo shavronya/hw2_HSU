@@ -68,7 +68,7 @@ install jellyfish
 
 check CPU
  
-<coce>lscpu</code>
+<code>lscpu</code>
  
 run jellyfish
 
