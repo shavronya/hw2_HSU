@@ -72,7 +72,7 @@ check CPU
  
 run jellyfish
 
-<code>jellyfish count -t 2 -C -m 31 -s 10M -o ./output/SRR292678_31mer ./raw/SRR292678sub_S1_L001_R1_001.fastq  ./raw/SRR292678sub_S1_L001_R2_001.fastq </code>
+<code>jellyfish count -t 2 -C -m 31 -s 128M -o ./output/SRR292678_31mer ./raw/SRR292678sub_S1_L001_R1_001.fastq  ./raw/SRR292678sub_S1_L001_R2_001.fastq </code>
 
 <code>-t 2</code> specifies the number of threads to be used <p>
 <code>-C</code> specifies the both strands are considered <p>
