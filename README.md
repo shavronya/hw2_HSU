@@ -96,6 +96,9 @@ peak is 125 <p>
 <code>sum(as.numeric(spec_31[,1]*spec_31[,2]))/125</code><p>
 the genome size is 5279372
 
+![image](https://user-images.githubusercontent.com/114799897/213428602-4488e52d-ac47-49e1-9ee0-349ca1a831a9.png)
+
+
 calculation <p>
 <code>N = (M*L)/(L-K+1)</code>
 
