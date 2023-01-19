@@ -233,19 +233,22 @@ download annotation
 
 <code> https://disk.yandex.ru/d/aWhOBLVIXR7Oaw </code>
 
-Based on this annotation, what is the origin of these toxin genes in E.coli X?
+based on this annotation, what is the origin of these toxin genes in E.coli X?
 
 ## Antibiotic resistance detection
 
 go to ResFinder
+ 
 <code>https://cge.food.dtu.dk/services/ResFinder/</code>
 
 upload the “scaffolds.fasta” file from the SPAdes output (select “Acquired antimicrobial resistance genes”, select “E. coli”)
 
 results for E. coli 55989
+ 
 <code>https://cge.food.dtu.dk//cgi-bin/webface.fcgi?jobid=63C9164B00001F6BCB7B53E9</code>
 
 results for E. coli X
+ 
 <code>https://cge.food.dtu.dk//cgi-bin/webface.fcgi?jobid=63C9159D00001D302B006644</code>
 
 ## Antibiotic resistance mechanism
