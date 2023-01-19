@@ -245,9 +245,9 @@ stxA (3483886 - 3484845, 960)
 
 ## Tracing the source of toxin genes in E. coli X
 
-download annotation
+download scaffolds to the cite and get .gbk file
 
-<code> https://disk.yandex.ru/d/aWhOBLVIXR7Oaw </code>
+<code> https://rast.nmpdr.org/ </code>
 
 based on this annotation, what is the origin of these toxin genes in E.coli X?
 
