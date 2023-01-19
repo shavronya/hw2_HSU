@@ -1,6 +1,8 @@
 ## HW2
-## 2011 Germany E. coli O104:H4 outbreak
+### 2011 Germany E. coli O104:H4 outbreak
 ### SCAMT Bioinformatics course 
+
+Article 
 
 ## Preparation
 
