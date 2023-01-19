@@ -175,6 +175,7 @@ get Prokka
 <code>conda install -c "bioconda/label/cf201901" prokka</code>
 
 run Prokka
+ 
 <code> prokka --outdir prokka --prefix E.coli_X ./output/spades3/scaffolds.fasta</code>
 
 ## Finding the closest relative of E. coli X
