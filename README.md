@@ -97,8 +97,10 @@ peak is 125 <p>
 the genome size is 5279372
 
 calculation <p>
-* <code>N = (M*L)/(L-K+1)</code> <p>
-* <code>Genome_size = T/N </code><p>
+<code>N = (M*L)/(L-K+1)</code>
+
+<code>Genome_size = T/N </code>
+ 
 * <code>N</code> Depth of coverage <p>
 * <code>M</code> Kmer peak <p>
 * <code>K</code> Kmer-size <p>
