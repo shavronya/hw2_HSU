@@ -184,7 +184,7 @@ according to the heatmap, the quality of the assembly improved because of additi
 
 ## Genome Annotation
 
-get Prokka
+get Prokka for gene prediction and annotation
 
 <code>conda install -c "bioconda/label/cf201901" prokka</code>
 
