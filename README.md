@@ -1,52 +1,73 @@
-# hw2
-mkdir ./HW2_HUS
+HW2
+2011 Germany E. coli O104:H4 outbreak
+SCAMT Bioinformatics course 
 
-cd ./HW2_HUS
+##Preparation
 
-mkdir ./raw
+###create a directory and folders<p>
+<code>mkdir ./HW2_HUS</code>
+ 
+<code>cd ./HW2_HUS</code>
 
-mkdir ./output
+<code>mkdir ./raw</code>
 
-cd ./raw
+<code>mkdir ./output</code>
 
-wget https://d28rh4a8wq0iu5.cloudfront.net/bioinfo/SRR292678sub_S1_L001_R1_001.fastq.gz
+<code>cd ./raw</code>
+ 
 
-wget https://d28rh4a8wq0iu5.cloudfront.net/bioinfo/SRR292678sub_S1_L001_R2_001.fastq.gz 
+###upload and upzip data
 
-gunzip SRR292678sub_S1_L001_R1_001.fastq
+<code>wget https://d28rh4a8wq0iu5.cloudfront.net/bioinfo/SRR292678sub_S1_L001_R1_001.fastq.gz</code>
+ 
+<code>wget https://d28rh4a8wq0iu5.cloudfront.net/bioinfo/SRR292678sub_S1_L001_R2_001.fastq.gz </code>
+ 
+<code>gunzip SRR292678sub_S1_L001_R1_001.fastq</code>
+ 
+<code>gunzip SRR292678sub_S1_L001_R2_001.fastq</code>
 
-gunzip SRR292678sub_S1_L001_R2_001.fastq
+<code>wget https://d28rh4a8wq0iu5.cloudfront.net/bioinfo/SRR292862_S2_L001_R1_001.fastq.gz</code>
+ 
+<code>wget https://d28rh4a8wq0iu5.cloudfront.net/bioinfo/SRR292862_S2_L001_R2_001.fastq.gz</code>
+ 
+<code>gunzip SRR292862_S2_L001_R1_001.fastq</code>
+ 
+<code>gunzip SRR292862_S2_L001_R2_001.fastq</code>
+ 
+<code>wget https://d28rh4a8wq0iu5.cloudfront.net/bioinfo/SRR292770_S1_L001_R1_001.fastq.gz </code>
+ 
+<code>wget https://d28rh4a8wq0iu5.cloudfront.net/bioinfo/SRR292770_S1_L001_R2_001.fastq.gz </code>
+ 
+<code>gunzip SRR292770_S1_L001_R1_001.fastq</code>
+ 
+<code>gunzip SRR292770_S1_L001_R2_001.fastq</code>
+ 
+ 
+##Exploring the dataset
+ 
+SRR292678 - paired end, insert size 470 bp (forward reads, reverse reads, 400 Mb each)<p>
+SRR292862 – mate pair, insert size 2 kb (forward reads, reverse reads, 200 Mb each)<p>
+SRR292770 – mate pair, insert size 6 kb (forward reads, reverse reads, 200 Mb each)<p>
+ 
+<code>cd ../</code>
+ 
+<code>fastqc ./raw/SRR292678sub_S1_L001_R1_001.fastq ./raw/SRR292678sub_S1_L001_R2_001.fastq  -o ./output </code>
+ 
+<code>fastqc ./raw/SRR292862_S2_L001_R1_001.fastq ./raw/SRR292862_S2_L001_R2_001.fastq  -o ./output</code>
+ 
+<code>fastqc ./raw/SRR292770_S1_L001_R1_001.fastq ./raw/SRR292770_S1_L001_R2_001.fastq  -o ./output</code>
+ 
+According to the FastQC reports per base sequence quality is excellent. No trimming is needed
 
-cd ../
+##K-mer profile and genome size estimation
 
-fastqc ./raw/SRR292678sub_S1_L001_R1_001.fastq ./raw/SRR292678sub_S1_L001_R2_001.fastq  -o ./output 
 
-cd ./raw
 
-wget https://d28rh4a8wq0iu5.cloudfront.net/bioinfo/SRR292862_S2_L001_R1_001.fastq.gz
+<code></code>
+<code></code>
+<code></code>
+<code></code>
 
-wget https://d28rh4a8wq0iu5.cloudfront.net/bioinfo/SRR292862_S2_L001_R2_001.fastq.gz
-
-gunzip SRR292862_S2_L001_R1_001.fastq
-
-gunzip SRR292862_S2_L001_R2_001.fastq
-cd ../
-
-fastqc ./raw/SRR292862_S2_L001_R1_001.fastq ./raw/SRR292862_S2_L001_R2_001.fastq  -o ./output
-
-cd ./raw
-
-wget https://d28rh4a8wq0iu5.cloudfront.net/bioinfo/SRR292770_S1_L001_R1_001.fastq.gz 
-
-wget https://d28rh4a8wq0iu5.cloudfront.net/bioinfo/SRR292770_S1_L001_R2_001.fastq.gz 
-
-gunzip SRR292770_S1_L001_R1_001.fastq
-
-gunzip SRR292770_S1_L001_R2_001.fastq
-
-cd ../
-
-fastqc ./raw/SRR292770_S1_L001_R1_001.fastq ./raw/SRR292770_S1_L001_R2_001.fastq  -o ./output
 
 conda install -c bioconda kmer-jellyfish
 
