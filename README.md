@@ -13,11 +13,11 @@ create a directory<p>
 <code>mkdir ./raw</code>
 
 <code>mkdir ./output</code>
-
-<code>cd ./raw</code>
  
 
-upload and upzip data
+upload and upzip raw data
+ 
+<code>cd ./raw</code>
 
 <code>wget https://d28rh4a8wq0iu5.cloudfront.net/bioinfo/SRR292678sub_S1_L001_R1_001.fastq.gz</code>
  
