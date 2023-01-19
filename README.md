@@ -4,7 +4,7 @@
 
 ## Preparation
 
-create a directory and folders<p>
+create a directory<p>
 
 <code>mkdir ./HW2_HUS</code>
  
