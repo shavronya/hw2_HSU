@@ -249,7 +249,7 @@ download scaffolds to the cite and get .gbk file
 
 <code> https://rast.nmpdr.org/ </code>
 
-based on this annotation, what is the origin of these toxin genes in E.coli X?
+the origin of these toxin genes in E.coli X is bacteriophage BP-933W
 
 ## Antibiotic resistance detection
 
