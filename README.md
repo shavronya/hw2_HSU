@@ -1,6 +1,6 @@
-HW2
-2011 Germany E. coli O104:H4 outbreak
-SCAMT Bioinformatics course 
+## HW2
+## 2011 Germany E. coli O104:H4 outbreak
+### SCAMT Bioinformatics course 
 
 ## Preparation
 
@@ -78,7 +78,7 @@ run jellyfish
 <code>-C</code> specifies the both strands are considered <p>
 <code>-m 31</code> specifies that now you are counting for 31 mer (i.e., k=31)<p>
 <code>-s 128M</code> is some kind of magical number specification of hash size. This should be as high as the physical memory allows<p>
-<code>-o </code>specifies the prefix of output file names<p>
+<code>-o </code> specifies the prefix of output file names<p>
 
 create histogram 
  
@@ -96,32 +96,33 @@ peak is 125 <p>
 <code>sum(as.numeric(spec_31[,1]*spec_31[,2]))/125</code><p>
 the genome size is 5279372
 
+calculation <p>
+N = (M*L)/(L-K+1) <p>
+Genome_size = T/N <p>
+<code>N</code> Depth of coverage <p>
+<code>M</code> Kmer peak <p>
+<code>K</code> Kmer-size <p>
+<code>L</code> avg read length <p>
+<code>T</code> Total bases <p>
 
+N = 125 * 90 / (90 - 31 + 1) = 187.5
+Genome_size = 5499346 * 2 * 90 / 187.5 = 5279372
 
-<code></code>
-<code></code>
-<code></code>
- <code></code>
-<code></code>
-<code></code>
- <code></code>
-<code></code>
-<code></code>
- <code></code>
-<code></code>
-<code></code>
-
-
-
-
-N = (M*L)/(L-K+1)
-Genome_size = T/N
-(N: Depth of coverage, M: Kmer peak, K: Kmer-size, L: avg read length T: Total bases)
-N = 125 * 
-You can use k-mer sizes of 31, count kmers with jellyfish count and make a histogram file with jellyfish histo.
+Graph 
 https://koke.asrc.kanazawa-u.ac.jp/HOWTO/kmer-genomesize.html
 
-
+<code></code>
+<code></code>
+<code></code>
+ <code></code>
+<code></code>
+<code></code>
+ <code></code>
+<code></code>
+<code></code>
+ <code></code>
+<code></code>
+<code></code>
 
 
 
