@@ -74,11 +74,11 @@ run jellyfish
 
 <code>jellyfish count -t 2 -C -m 31 -s 128M -o ./output/SRR292678_31mer ./raw/SRR292678sub_S1_L001_R1_001.fastq  ./raw/SRR292678sub_S1_L001_R2_001.fastq </code>
 
-<code>-t 2</code> specifies the number of threads to be used <p>
-<code>-C</code> specifies the both strands are considered <p>
-<code>-m 31</code> specifies that now you are counting for 31 mer (i.e., k=31)<p>
-<code>-s 128M</code> is some kind of magical number specification of hash size. This should be as high as the physical memory allows<p>
-<code>-o </code> specifies the prefix of output file names<p>
+* <code>-t 2</code> specifies the number of threads to be used <p>
+* <code>-C</code> specifies the both strands are considered <p>
+* <code>-m 31</code> specifies that now you are counting for 31 mer (i.e., k=31)<p>
+* <code>-s 128M</code> is some kind of magical number specification of hash size. This should be as high as the physical memory allows<p>
+* <code>-o </code> specifies the prefix of output file names<p>
 
 create histogram 
  
