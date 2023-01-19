@@ -271,6 +271,8 @@ results for E. coli X
  
 <code>https://cge.food.dtu.dk//cgi-bin/webface.fcgi?jobid=63C9159D00001D302B006644</code>
 
+resistant to:
+
 * beta-lactam
 * folate pathway antagonist
 * tetracycline
