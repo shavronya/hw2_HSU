@@ -153,18 +153,6 @@ run QUAST
 
 <code>./quast-5.2.0/quast.py ./output/spades/contigs.fasta ./output/spades/scaffolds.fasta</code>
 
-## Effect of read correction
-
-
-<code>jellyfish count -t 2 -C -m 31 -s 128M -o ./output/scaffolds_31mer ./output/spades/scaffolds.fasta </code>
-
-<code> jellyfish histo -o ./output/scaffolds_31mer.histo ./output/scaffolds_31mer </code>
-
-Use <code>http://qb.cshl.edu/genomescope/</code> to build the graph
-
-Add both plots in your report and explain the difference.
-
-
 ## Impact of reads with large insert size
 
 run SPAdes for SRR292678 as a paired ends, SRR292862 and SRR292770 as a mate pairs
