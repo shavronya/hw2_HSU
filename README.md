@@ -287,10 +287,26 @@ resistant to:
 
 Search for these enzymes in the same way that we looked for the toxin genes: by using the Sequence Navigator in Mauve. 
 
+Examples:
+
 beta-lactamase
 
 bla (4758802-4759935, 1134)
-![image](https://user-images.githubusercontent.com/114799897/213423286-2384dec8-3937-4709-a1e6-f915532b9266.png)
+![image](https://user-images.githubusercontent.com/114799897/213723779-421e7ffc-218f-4bcc-8f0d-73d86709373a.png)
 
 bla gene could have appeared through horizontal transfer between bacteria
+
+qacE (5295265 - 5295612, 348)
+![image](https://user-images.githubusercontent.com/114799897/213724673-8babcbbc-fb5f-49c7-84e1-c90e1fbc8979.png)
+
+tet(A) (5301503 - 5302777, 1275)
+![image](https://user-images.githubusercontent.com/114799897/213725242-bdbb0511-0a5f-4fe2-a4a6-a75d2f8fc247.png)
+
+aph(6)-Id (5291104 - 5291940, 837)
+![image](https://user-images.githubusercontent.com/114799897/213727552-ea144311-272a-4677-8a90-03d5a0d8aad0.png)
+
+qacE, tet(A), aph(6)-Id could have appered as transposable elements. 
+
+
+
 
