@@ -2,7 +2,7 @@
 ### 2011 Germany E. coli O104:H4 outbreak
 ### SCAMT Bioinformatics course 
 
-Article 
+Article https://docs.google.com/document/d/1LxfNgLzOXBl1DzAlPRQqHIPwzKl621jT/edit?usp=sharing&ouid=105484363120367893957&rtpof=true&sd=true 
 
 ## Preparation
 
