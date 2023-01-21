@@ -200,7 +200,7 @@ choose:
 
 * RefSeq Genome Database (refseq_genomes)
 
-* Organism fE. coli (taxid:562)
+* Organism E. coli (taxid:562)
 
 * Enterz Query 1900/01/01:2011/01/01[PDAT]
 
