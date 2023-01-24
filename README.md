@@ -4,26 +4,17 @@
 
 Article https://docs.google.com/document/d/1LxfNgLzOXBl1DzAlPRQqHIPwzKl621jT/edit?usp=sharing&ouid=105484363120367893957&rtpof=true&sd=true 
 
-Plan of the project
-1. Preparation
-
-2. Exploring the dataset
-
-3. K-mer profile and genome size estimation
-
-4. Assembling E. coli X genome from paired reads
-
-5. Impact of reads with large insert size
-
-6. Genome Annotation
-
-7. Finding the closest relative of E. coli X
-
-8. What is the genetic cause of HUS?
-
-9. Tracing the source of toxin genes in E. coli X
-
-10. Antibiotic resistance mechanism
+Plan of the project <p>
+1. Preparation <p>
+2. Exploring the dataset <p>
+3. K-mer profile and genome size estimation <p>
+4. Assembling E. coli X genome from paired reads <p>
+5. Impact of reads with large insert size <p>
+6. Genome Annotation <p>
+7. Finding the closest relative of E. coli X <p>
+8. What is the genetic cause of HUS? <p>
+9. Tracing the source of toxin genes in E. coli X <p>
+10. Antibiotic resistance mechanism <p>
 
 ## Preparation
 
